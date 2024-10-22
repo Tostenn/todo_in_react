@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input{
+    @apply px-3 py-2 rounded-lg outline-none text-[#075E54]
+    focus:outline-none active:ring-green-400 bg-white font-bold
+   focus:ring-green-400 focus:ring-4 ring-green-400 ring-4 
+   hover:transition-all placeholder:text-green-800/50
+}
+/* bouton foncer */
+@layer components {
+    .btn-clair {
+      @apply text-[#075E54] bg-[#E9EDEF] font-bold text-lg py-2 px-4 rounded-lg shadow-md
+      focus:outline-none active:ring-green-400 focus:ring-green-400 focus:ring-4
+      hover:ring-green-400 hover:ring-4 hover:transition-all 
+    }
+    .btn-foncer {
+      @apply bg-[#075E54] text-[#E9EDEF] font-bold text-lg py-2 px-4 rounded-lg shadow-md
+      focus:outline-none active:ring-green-400 focus:ring-green-400 focus:ring-4
+      hover:ring-green-400 hover:ring-4 hover:transition-all hover:bg-[#075E54] 
+      focus:bg-[#075E54]
+    }
+    .btn-danger {
+      @apply bg-red-700 text-red-50 font-bold text-lg py-2 px-4 rounded-lg shadow-md
+      focus:outline-none active:ring-red-400 focus:ring-red-400 focus:ring-4
+      hover:ring-red-400 hover:ring-4 hover:transition-all hover:bg-red-700
+      focus:bg-red-700
+    }
+    .btn-primary {
+      @apply bg-blue-700 text-blue-50 font-bold text-lg py-2 px-4 rounded-lg shadow-md
+      focus:outline-none active:ring-blue-400 focus:ring-blue-400 focus:ring-4
+      hover:ring-blue-400 hover:ring-4 hover:transition-all hover:bg-blue-700
+      focus:bg-blue-700
+    }
+}
+
+.checkbox{
+    @apply bg-gray-200 rounded-lg outline-none
+    focus:outline-none active:ring-gray-400 
+   focus:ring-gray-400 focus:ring-2 hover:ring-gray-400 hover:ring-2
+   hover:transition-all mr-3
+}
+table{
+    @apply border-2 border-gray-800 w-full shadow-lg rounded-md overflow-hidden
+}
+table tr {
+    @apply border text-left text-xl
+}
+table tr.category {
+    @apply border text-center font-bold py-2
+}
+table tr.is {
+    @apply bg-green-600 text-green-50 
+}
+table tr.null {
+    @apply bg-red-600 text-red-50 
+}
+
+.label-type{
+    @apply w-[300px] btn-clair block capitalize bg-[#E9EDEF] text-[#121B22]
+}
+input[name="type"]:checked + label{
+    @apply bg-[#075E54] text-[#E9EDEF]
+}
+input[name="color"]:checked + label{
+    @apply ring-4 ring-[#075E54]
+}
+
+*::selection{
+    @apply bg-[#075E54] text-[#E9EDEF]
+}
